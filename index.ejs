@@ -14,10 +14,10 @@
     <p><%=content %></p>
     <p><table style="width: 400px;">
       <tr><th>伝言です！</th></tr>
-      <tr><td><%= data.msg %></td></tr>
+      <tr><td><%=data.msg %></td></tr>
     </table></p>
     <p>
-      <form method="POST" action="/"></form>
+      <form method="POST" action="/">
       MESSAGE <input type="text" name="msg">
       <input type="submit" value="送信">
     </p>
