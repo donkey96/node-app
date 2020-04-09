@@ -55,6 +55,7 @@ function getFromClient(request,response){
       title:"Index",
       content:msg,
       data:data,
+      filename:'data_item' // ★追記
     });
     response.writeHead(200, {'Content-Type': 'text/html'});
     response.write(content);
