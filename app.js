@@ -9,13 +9,15 @@ console.log('Server start!');
 // ここまでメインプログラム
 
 // createSeverの処理
-function getFromClient(req, res){
-  request = req;
-  response = res;
+function getFromClient(reqest, response){
   fs.readFile('./index.html', 'UTF-8',
     (error, data)=>{
+      var content = data.
+        replace(/dummy_title/g, 'タイトルです').
+        replace(/dummy_content/g, 'これがコンテンツです。');
+
       response.writeHead(200, {'Content-Type': 'text/html'});
-      response.write(data);
+      response.write(content);
       response.end();
     }
   );
