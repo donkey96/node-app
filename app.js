@@ -13,7 +13,10 @@ console.log('Server start!');
 
 // createSeverの処理
 function getFromClient(reqest, response){
-  var content = ejs.render(index_page);
+  var content = ejs.render(index_page, {
+    title:"Index",
+    content:"これはテンプレートを使ったサンプルです。",
+  });
   response.writeHead(200, {'Content-Type': 'text/html'});
   response.write(content);
   response.end();
